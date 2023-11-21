@@ -14,6 +14,7 @@ This is a package that uses Python to control products such as Mirobot robotic a
 
 Wlkatapython is a Python package used to control products such as Mirabot robotic arms, E4 robotic arms, slides, conveyor belts, etc.
 
+The installation command is: pip install wlkatapython
 
 This component uses the G code protocol to communicate with the Mirobot over a serial connection. The official **G code instruction set** and **driver download** can be found at the [WLkata Download Page](https://www.wlkata.com/pages/download-center)
 
