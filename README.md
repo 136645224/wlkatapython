@@ -48,7 +48,7 @@ import wlkatapython
 import serial
 import time
 
-'''停止当前程序'''
+'''Stop the current program'''
 serial1 = serial.Serial("COM3", 38400)#Set serial port and baud rate
 mirobot1 =wlkatapython.Wlkata_UART()#Create a new mirobot1 object
 mirobot1.init(serial1, 1)#Set the address of the robotic arm
