@@ -14,7 +14,6 @@ This is a package that uses Python to control products such as Mirobot robotic a
 
 Wlkatapython is a Python package used to control products such as Mirabot robotic arms, E4 robotic arms, slides, conveyor belts, etc.
 
-![Mirobot](/images/Mirobot_Solo_256.jpg)
 
 This component uses the G code protocol to communicate with the Mirobot over a serial connection. The official **G code instruction set** and **driver download** can be found at the [WLkata Download Page](https://www.wlkata.com/pages/download-center)
 
@@ -25,24 +24,24 @@ import wlkatapython
 import serial
 import time
 
-'''机械臂回零'''
-serial1 = serial.Serial("COM3", 38400)#设置串口及波特率
-mirobot1 =wlkatapython.Wlkata_UART()#新建mirobot1对象
-mirobot1.init(serial1, 1)#设置机械臂地址
-mirobot1.homing()#机械臂回零
-serial1.close()#关闭串口
+'''Robot arm return to zero'''
+serial1 = serial.Serial("COM3", 38400)#Set serial port and baud rate
+mirobot1 =wlkatapython.Wlkata_UART()#Create a new mirobot1 object
+mirobot1.init(serial1, 1)#Set the address of the robotic arm
+mirobot1.homing()#Robot arm return to zero
+serial1.close()#close port
 ```
 ```python
 import wlkatapython
 import serial
 import time
 
-'''执行离线文件'''
-serial1 = serial.Serial("COM3", 38400)#设置串口及波特率
-mirobot1 =wlkatapython.Wlkata_UART()#新建mirobot1对象
-mirobot1.init(serial1, 1)#设置机械臂地址
-mirobot1.runFile("ceshi", False)#循环执行某一文件，True为循环执行文件，False为单次执行文件
-serial1.close()#关闭串口
+'''Execute offline files'''
+serial1 = serial.Serial("COM3", 38400)#Set serial port and baud rate
+mirobot1 =wlkatapython.Wlkata_UART()#Create a new mirobot1 object
+mirobot1.init(serial1, 1)#Set the address of the robotic arm
+mirobot1.runFile("ceshi", False)#Circular execution of a file, True for circular execution of the file, False for single execution of the file
+serial1.close()#close port
 ```
 ```python
 import wlkatapython
@@ -50,13 +49,13 @@ import serial
 import time
 
 '''停止当前程序'''
-serial1 = serial.Serial("COM3", 38400)#设置串口及波特率
-mirobot1 =wlkatapython.Wlkata_UART()#新建mirobot1对象
-mirobot1.init(serial1, 1)#设置机械臂地址
-mirobot1.runFile("ceshi",True)#循环执行某一文件，True为循环执行文件，False为单次执行文件
-time.sleep(5)#等待5秒钟
-mirobot1.cancellation()#停止当前运行的程序
-serial1.close()#关闭串口
+serial1 = serial.Serial("COM3", 38400)#Set serial port and baud rate
+mirobot1 =wlkatapython.Wlkata_UART()#Create a new mirobot1 object
+mirobot1.init(serial1, 1)#Set the address of the robotic arm
+mirobot1.runFile("ceshi",True)#Circular execution of a file, True for circular execution of the file, False for single execution of the file
+time.sleep(5)#Wait for 5 seconds
+mirobot1.cancellation()#Stop the currently running program
+serial1.close()#close port
 ```
 
 
