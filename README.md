@@ -16,6 +16,8 @@ Wlkatapython is a Python package used to control products such as Mirabot roboti
 
 The installation command is: pip install wlkatapython
 
+If pyserial is not installed on your device, please use the command: pip install pyserial
+
 This component uses the G code protocol to communicate with the Mirobot over a serial connection. The official **G code instruction set** and **driver download** can be found at the [WLkata Download Page](https://www.wlkata.com/pages/download-center)
 
 ## Example Usage
